@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Title from './components/Title.js'
 import FilterButton from './components/filterButton.js'
+import SearchField from './components/searchfield.js'
+
 class App extends Component {
   render() {
     return (
@@ -14,11 +16,7 @@ class App extends Component {
       <FilterButton value="Check Date / Check Amount"/>
       <FilterButton value="Other Options"/> {/*Will need dropdown feature added*/}
       </div>
-      <div className="remittanceSearch">
-      <input type="text" class="form-control" placeholder="Search..">
-      </input>
-      <button className="btn btn-primary disabled"> Search </button>
-      </div>
+      <SearchField/>
       </div>
       </div>
     );
