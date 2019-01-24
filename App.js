@@ -6,14 +6,16 @@ import SearchField from "./components/SearchField.js";
 
 class App extends Component {
   state = {
-    Testvalue: ""
+    currentValue: "Test Value"
   };
 
-  buttonClicked() {
+  buttonClicked = () => {
     console.log("button clicked");
-    this.setState({ Testvalue: event.target.value });
-    console.log(this.state.Testvalue);
-  }
+    this.setState(state => {
+      return { currentValue: event.target.value };
+    });
+    console.log(this.state.currentValue);
+  };
 
   render() {
     return (
@@ -22,13 +24,18 @@ class App extends Component {
           <Title />
           <div className="formHeader">
             <p className="SearchOptionText"> Please select search options </p>
-            <FilterButton onClick={this.buttonClicked} value="Check Number" />
-            <button onClick={this.buttonClicked}> test button </button>
             <FilterButton
-              onClick={this.buttonClicked}
+              buttonClicked={this.buttonClicked}
+              value="Check Number"
+            />
+            <FilterButton
+              buttonClicked={this.buttonClicked}
               value="Check Date / Check Amount"
             />
-            <FilterButton onClick={this.buttonClicked} value="Other Options" />{" "}
+            <FilterButton
+              buttonClicked={this.buttonClicked}
+              value="Other Options"
+            />{" "}
             {/*Will need dropdown feature added*/}
           </div>
           <SearchField placeholder="" />
