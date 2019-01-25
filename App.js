@@ -6,39 +6,30 @@ import SearchField from "./components/SearchField.js";
 
 class App extends Component {
   state = {
-    currentValue: "Test Value"
+    searchKey: "Check Number"
   };
 
-  buttonClicked = () => {
-    console.log("button clicked");
-    this.setState(state => {
-      return { currentValue: event.target.value };
-    });
-    console.log(this.state.currentValue);
+  buttonClicked = e => {
+    this.setState({ searchKey: e.target.value });
   };
 
   render() {
+    console.log("The button clicked was " + this.state.searchKey);
     return (
       <div className="App">
         <div className="jumbotron Container">
           <Title />
           <div className="formHeader">
             <p className="SearchOptionText"> Please select search options </p>
+            <FilterButton buttonClicked={this.buttonClicked} value="checkNum" />
             <FilterButton
               buttonClicked={this.buttonClicked}
-              value="Check Number"
+              value="checkDteAmt"
             />
-            <FilterButton
-              buttonClicked={this.buttonClicked}
-              value="Check Date / Check Amount"
-            />
-            <FilterButton
-              buttonClicked={this.buttonClicked}
-              value="Other Options"
-            />{" "}
+            <FilterButton buttonClicked={this.buttonClicked} value="other" />
             {/*Will need dropdown feature added*/}
           </div>
-          <SearchField placeholder="" />
+          <SearchField value={this.state.searchKey} />
         </div>
       </div>
     );

@@ -30,3 +30,19 @@
     transform: rotate(360deg);
   }
 }
+
+.date-search-from {
+  margin-top: 8%;
+  margin-right: 3%;
+  width: 20%;
+  display: inline;
+}
+
+.date-search-to {
+  width: 20%;
+  display: inline;
+}
+
+searchButton {
+  margin-top: 200%;
+}
