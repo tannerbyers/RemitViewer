@@ -23,9 +23,6 @@ const SearchField = props => {
           type="date"
         />
         </div>
-        <div className="searchButton my-4">
-          <Button className="btn btn-primary disabled"> Search </Button>
-        </div>
       </div>
     );
   }
@@ -48,9 +45,6 @@ const SearchField = props => {
           type="date"
         />
         </div>
-        <div className="searchButton my-4">
-          <Button className="btn btn-primary disabled"> Search </Button>
-        </div>
       </div>
     );
   }
@@ -60,7 +54,7 @@ const SearchField = props => {
       <div className="remittanceSearch">
       <h2>Patient Search</h2>
         <Input placeholder="Please Enter Member ID" className="form-control SearchField my-4" />
-        <div className="d-flex flex-row">
+        <div className="d-flex flex-row my-4">
         <Input placeholder="Patient First Name"/>
         <Input placeholder="Patient Last Name" className="mx-4"/>
         </div>
@@ -77,9 +71,6 @@ const SearchField = props => {
           type="date"
         />
         </div>
-        <div className="searchButton my-4">
-          <Button className="btn btn-primary disabled"> Search </Button>
-        </div>
       </div>
     );
   }
@@ -88,9 +79,6 @@ const SearchField = props => {
     <div className="remittanceSearch">
     <h2>Check Number</h2>
       <Input placeholder="Please Enter Check #" className="form-control SearchField" />
-      <div className="searchButton my-4">
-        <Button className="btn btn-primary disabled"> Search </Button>
-      </div>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../App.css";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
-export default class SearchDropdown extends React.Component {
+class SearchDropdown extends React.Component {
   constructor(props) {
     super(props);
 
@@ -32,3 +32,5 @@ export default class SearchDropdown extends React.Component {
     );
   }
 }
+
+export default SearchDropdown
