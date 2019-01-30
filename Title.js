@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../App.css';
 
-class Title extends Component {
+const Title = () => (
+  <div>
+    <h1>
+      {' '}
+      <b> Remittance Viewer</b>{' '}
+    </h1>
+  </div>
+);
 
-render(){
-  return (
-    <div>
-    <h1> <b> Remittance Viewer</b> </h1>
-    </div>
-  );
-}
-}
-
-export default Title
+export default Title;
